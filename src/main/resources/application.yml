@@ -1,2 +1,23 @@
-#server:
-  #port: 8080
+# 应用名称
+spring:
+  application:
+    name: wiki
+  # MySQL 配置
+  datasource:
+    url: jdbc:mysql://127.0.0.1/wiki?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&useSSL=true&allowMultiQueries=true
+    username: wiki
+    password: wiki
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # Redis 配置
+  redis:
+    host: localhost
+    port: 6379
+    database: 1
+
+# 应用服务 WEB 访问端口
+server.port: 8080
+
+
+# 配置mybatis所有Mapper.xml所在的路径
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml

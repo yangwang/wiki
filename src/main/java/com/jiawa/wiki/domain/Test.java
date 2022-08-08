@@ -3,7 +3,9 @@ package com.jiawa.wiki.domain;
 public class Test {
 
     private Integer id;
+
     private String name;
+
     private String password;
 
     public Integer getId() {
